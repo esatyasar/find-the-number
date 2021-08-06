@@ -3,11 +3,10 @@ function play(){
 
 let btn = document.getElementById("btn");
 let output = document.getElementById("outputtext");
-
 let number = Math.floor(Math.random()*100)+1;
-
 let count = 0;
 
+// when onclick the button
 btn.addEventListener("click", function(){
     let input = document.getElementById("userInput").value;
     input = parseInt(input);
@@ -16,6 +15,7 @@ btn.addEventListener("click", function(){
     }else if (Number.isInteger(input) === false){
         alert("Please enter a Integer value")
     }else{
+        // starting game
         if (input == number){
             output.innerHTML = "CONGRATULATIONS"
             document.getElementById("icons").setAttribute("src", "./assests/giphy.gif");
@@ -51,6 +51,7 @@ btn.addEventListener("click", function(){
 });
 
 }
+// call function
 play();
 
 
